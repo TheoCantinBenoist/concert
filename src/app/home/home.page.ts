@@ -36,9 +36,9 @@ public formulaireTab=[];
     
   }
 
-    public updateConcert(pos){
-
-     this.router.navigateByUrl('/gestion');
+    public goUpdateConcert(pos){
+      this.gestconcertService.input = this.formulaireTab[pos]
+     this.router.navigateByUrl('/modifier');
     }
 
    

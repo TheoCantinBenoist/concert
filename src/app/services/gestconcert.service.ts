@@ -58,18 +58,9 @@ public async addConcert(data){
  
 }
 
-public async updateConcert(data)
+public updateConcert()
 {
-  this.formulaireTab.push(data) 
-  this.input.nom = null;
-  this.input.genre= null;
-  this.input.salle= null;
-  this.input.ville= null;
-  this.input.note= null;
-  this.input.date= null;
-  this.input.commentaire= null;
-  this.persist();
- 
+   this.persist();
 }
 
 

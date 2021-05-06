@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'gestion',
     loadChildren: () => import('./gestion/gestion.module').then( m => m.GestionPageModule)
   },
+  {
+    path: 'modifier',
+    loadChildren: () => import('./modifier/modifier.module').then( m => m.ModifierPageModule)
+  },
 ];
 
 @NgModule({

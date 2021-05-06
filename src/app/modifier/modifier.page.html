@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>gestion</ion-title>
-    <ion-buttons slot="start">
+    <ion-title>modifier</ion-title>
+  <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
@@ -9,10 +9,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-label>nom du groupe</ion-label>
-      <ion-input [(ngModel)]="gestconcertService.input.nom"> </ion-input>
+ <ion-list>
+    <ion-item >
+      <ion-label>nom</ion-label>
+      <ion-input  [(ngModel)]="gestconcertService.input.nom">
+      </ion-input>
     </ion-item>
 
     <ion-item>
@@ -49,10 +50,10 @@
 
 
   </ion-list>
-  <ion-button expand="block" (click)="validateForm()">
+
+ <ion-button expand="block" (click)="updateOneConcert()">
     Valider
   </ion-button>
-
 
 
 </ion-content>
