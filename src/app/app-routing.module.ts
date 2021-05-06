@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'gestion',
+    loadChildren: () => import('./gestion/gestion.module').then( m => m.GestionPageModule)
+  },
 ];
 
 @NgModule({

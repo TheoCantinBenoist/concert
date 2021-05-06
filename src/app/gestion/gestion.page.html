@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>gestion</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>nom du groupe</ion-label>
+      <ion-input [(ngModel)]="gestconcertService.input.nom">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>genre</ion-label>
+      <ion-input [(ngModel)]="gestconcertService.input.genre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>salle</ion-label>
+      <ion-input [(ngModel)]="gestconcertService.input.salle"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>ville</ion-label>
+      <ion-input [(ngModel)]="gestconcertService.input.ville"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>date</ion-label>
+      <ion-input type="date" [(ngModel)]="gestconcertService.input.date"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>note</ion-label>
+      <ion-input type="number" min="1" max="5"
+       [(ngModel)]="gestconcertService.input.note"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>commentaire</ion-label>
+      <ion-textarea [(ngModel)]="gestconcertService.input.commentaire"></ion-textarea>
+    </ion-item>
+
+
+  </ion-list>
+  <ion-button expand="block" (click)="validateForm()">
+    Valider
+  </ion-button>
+
+
+
+</ion-content>
