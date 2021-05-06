@@ -1,7 +1,7 @@
 import { GestconcertService } from './../services/gestconcert.service';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,9 @@ export class HomePage {
 public formulaireTab=[];
 
   constructor(public gestconcertService: GestconcertService,
-    private alertCtrl :AlertController) {}
+    private alertCtrl :AlertController,
+    private router: Router
+   ) {}
 
   public async ngOnInit(){
     this.formulaireTab = await this.gestconcertService.getConcert();
@@ -33,5 +35,12 @@ public formulaireTab=[];
     alert.present();
     
   }
+
+    public updateConcert(pos){
+
+     this.router.navigateByUrl('/gestion');
+    }
+
+   
 
 }

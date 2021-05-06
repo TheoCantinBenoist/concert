@@ -56,8 +56,23 @@ public async addConcert(data){
   this.input.commentaire= null;
   this.persist();
  
-
 }
+
+public async updateConcert(data)
+{
+  this.formulaireTab.push(data) 
+  this.input.nom = null;
+  this.input.genre= null;
+  this.input.salle= null;
+  this.input.ville= null;
+  this.input.note= null;
+  this.input.date= null;
+  this.input.commentaire= null;
+  this.persist();
+ 
+}
+
+
 
 private async persist() {
  

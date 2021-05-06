@@ -32,7 +32,7 @@ export class GestionPage implements OnInit {
     this.gestconcertService.addConcert(this.gestconcertService.getConcertData());
     this.router.navigateByUrl('/home');
 
-
+  
 
   }
 }
